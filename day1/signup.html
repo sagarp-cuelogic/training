@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>Sign Up page</title>
+	
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 20px;
+		color: #585858;
+		background-color: #f2f2f2;
+	}
+	.container{
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.padd-top-80{
+		padding-top: 80px;
+	}
+	.container form{
+		max-width: 460px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #FFF;
+		/*border: #CCC 1px solid;*/
+		border-radius: 7px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	}
+	form h2{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	input[type="text"], input[type="password"]{
+		width: 100%;
+		padding: 5px 8px;
+		margin-bottom: 15px;
+		font-size: 14px;
+		line-height: 24px;
+		height: 34px;
+		color: #585858;
+		border: #ddd 1px solid;
+		box-sizing:border-box;
+	}
+	input[type="submit"]{
+		padding: 5px 20px;
+		background-color: #3ECBFA;
+		border: #48ADCF 1px solid;
+		margin-right: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #135D75;
+		font-family: Arial, Helvetica, sans-serif;
+		cursor: pointer;
+	}
+	a{
+		color: #555;
+		text-decoration: none;
+	}
+	a:hover{
+		color: #000;
+		text-decoration: underline;
+	}
+	</style>
+  </head>
+  <body>
+		<div class="container padd-top-80">
+		  <!-- Registration form -->
+		  <form>
+			<!-- Form Header -->
+		  	<h2>New Member Regiser Here</h2>
+		  	<input type="text" name="name" placeholder="Full Name">
+		  	<input type="text" name="email" placeholder="Email Address">
+		  	<input type="text" name="phone" placeholder="Contact No.">
+		  	<input type="password" name="password" placeholder="Choose Password">
+		  	<input type="password" name="password" placeholder="Retype Password">
+		  	<input type="submit" value="Sign Up"> Already a member? <a href="login.html">Login Here</a>
+		  </form>
+		  <!-- Registration form ends -->
+		</div>
+  </body>
+</html>
