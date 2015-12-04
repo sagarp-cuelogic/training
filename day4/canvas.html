@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>Canvas Drawing</title>
+	
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 20px;
+		color: #585858;
+		background-color: #f2f2f2;
+	}
+	.container{
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	.padd-top-80{
+		padding-top: 80px;
+		text-align: center;
+	}
+	.padd-top-80 canvas{
+		/*width: 500px;
+		height: 500px;*/
+		border: #CCC 1px solid;
+		background: #FFF;
+	}
+	</style>
+	<script>
+	  function draw() {
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#333333";
+		ctx.fillRect(100,100,100,100);
+
+		ctx.beginPath();
+		ctx.arc(285,315,130,0,2*Math.PI);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(75,50);
+		ctx.lineTo(100,75);
+		ctx.lineTo(100,25);
+		ctx.fill();
+	  }
+	</script>
+  </head>
+  <body onload="draw();">
+		<div class="padd-top-80">
+		  <canvas id="myCanvas" width="500" height="500"></canvas>
+		</div>
+  </body>
+</html>
