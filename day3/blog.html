@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8"/>
+	<title>Blog page with Iframe</title>
+	<meta name="description" content="Some discription about the website goes here." />
+	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, Tutorials"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 20px;
+		color: #585858;
+	}
+	.container{
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 15px;
+		overflow: hidden;
+	}
+	.padd-top-80{
+		padding-top: 80px;
+	}
+	a{
+		color: #555;
+		text-decoration: none;
+	}
+	a:hover{
+		color: #000;
+		text-decoration: underline;
+	}
+	.clearfix{
+		clear: both;
+	}
+	header{
+		background-color: #7a7a7a;
+		color: #FFF;
+		padding: 10px 0;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 9;
+	}
+	h1, h2{
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: normal;
+	}
+	h2{
+		margin:30px 0;
+	}
+	h3{
+		font-size: 22px;
+		line-height: 22px;
+		margin-top: 0;
+	}
+	.section{
+		margin-top: 110px;
+	}
+	.col-md-4, .col-md-6, .col-md-8, .col-md-12{
+		width: 33.333333%;
+		padding: 0 15px;
+		box-sizing:border-box;
+		float: left;
+	}
+	.col-md-6{
+		width: 50%;
+	}
+	.col-md-8{
+		width: 66.667%;
+	}
+	.col-md-12{
+		width: 100%;
+	}
+	.sidebar{
+		background-color: #7a7a7a;
+		color: #FFF;
+		height: 100%;
+		padding: 5px 0;
+		position: relative;
+	}
+	.sidebar:after{
+		content: "";
+		width: 100%;
+		height: 500%;
+		position: absolute;
+		background: #7a7a7a;
+	}
+	.sidebar h2{
+		padding: 0 15px;
+		margin: 20px 0;
+	}
+	.nav{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	aside .nav li{
+		list-style: none;
+	}
+	aside .nav li a{
+		padding: 15px 15px 15px 55px ;
+		font-size: 36px;
+		line-height: 36px;
+		color: #FFF;
+		display: block;
+	}
+	aside .nav li a:hover{
+		color: #FFF;
+	}
+	.mainbg{
+		background-color: #eaeaea;
+		padding:30px 30px 0;
+	}
+	.mainbg .thumbnail{
+		margin-bottom: 30px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.thumbnail .overlay{
+		position: absolute;
+		background-color: rgba(0,0,0,0.5);
+		top: -100%;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease;
+	}
+	.overlay h3{
+		font-size: 44px;
+		line-height: 44px;
+		font-weight: normal;
+		color: #FFF;
+		margin-bottom: 50px;
+	}
+	.thumbnail:hover .overlay{
+		top: 0;
+	}
+	.row{margin: 0 -15px;}
+	img{
+		max-width: 100%;
+		vertical-align: bottom;
+	}
+	iframe{
+		border: none;
+		margin-bottom: 20px;
+	}
+	</style>
+  </head>
+  <body>
+  	<header>
+  	  <div class="container">
+  	    <h1>Blog Header</h1>
+  	  </div>
+  	</header>
+  	<div class="section">
+  	<div class="container">
+  		<h2>Blog Heading</h2>
+  		<div class="row">
+  		  <aside class="col-md-4">
+  		    <div class="sidebar">
+  			  <h2>Left Navigation</h2>
+  			  <ul class="nav">
+  			  <li><a href="javascript:void(0);">sub nav 1</a></li>
+  			  <li><a href="javascript:void(0);">sub nav 2</a></li>
+  			  <li><a href="javascript:void(0);">sub nav 3</a></li>
+  			  <li><a href="javascript:void(0);">sub nav 4</a></li>
+  			  </ul>
+  			  <div class="clearfix">&nbsp;</div>
+  			</div>
+  		  </aside>
+  		  <div class="col-md-8">
+  		   <div class="mainbg">
+  		    <div class="row">
+  		      <div class="col-md-12">
+  		        <h3>External Webpage in Iframe</h3>
+  		        <iframe src="http://www.w3schools.com/html/html_youtube.asp" width="100%" height="300"></iframe>
+  		        <!--<iframe src="http://projectigi2.co.uk/" allowfullscreen=""></iframe>-->
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb1.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb2.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb3.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb1.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb2.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="col-md-6">
+  		        <div class="thumbnail">
+  		          <img src="images/thumb3.jpg">
+  		          <div class="overlay">
+  		            <h3>Overlay</h3>
+  		            <img src="images/zoom.png">
+  		          </div>
+  		        </div>
+  		      </div>
+  		      <div class="clearfix"></div>
+  		    </div>
+  		   </div>
+  		  </div>
+  		  <div class="clearfix"></div>
+  		</div>
+  	</div>
+  	</div>
+  </body>
+</html>

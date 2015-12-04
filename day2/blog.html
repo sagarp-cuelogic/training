@@ -19,6 +19,7 @@
 		max-width: 1170px;
 		margin: 0 auto;
 		padding: 0 15px;
+		overflow: hidden;
 	}
 	.padd-top-80{
 		padding-top: 80px;
@@ -35,10 +36,17 @@
 		clear: both;
 	}
 	header{
-		height:70px;
 		background-color: #7a7a7a;
 		color: #FFF;
 		padding: 10px 0;
+	}
+	h1, h2{
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: normal;
+	}
+	h2{
+		margin:30px 0;
 	}
 	.col-md-4, .col-md-6, .col-md-8{
 		width: 33.333333%;
@@ -52,11 +60,23 @@
 	.col-md-8{
 		width: 66.667%;
 	}
-	aside{
+	.sidebar{
 		background-color: #7a7a7a;
 		color: #FFF;
 		height: 100%;
-		float: left;
+		padding: 5px 0;
+		position: relative;
+	}
+	.sidebar:after{
+		content: "";
+		width: 100%;
+		height: 500%;
+		position: absolute;
+		background: #7a7a7a;
+	}
+	.sidebar h2{
+		padding: 0 15px;
+		margin: 20px 0;
 	}
 	.nav{
 		margin: 0;
@@ -67,8 +87,9 @@
 		list-style: none;
 	}
 	aside .nav li a{
-		padding: 15px;
-		font-size: 26px;
+		padding: 15px 15px 15px 55px ;
+		font-size: 36px;
+		line-height: 36px;
 		color: #FFF;
 		display: block;
 	}
@@ -77,10 +98,10 @@
 	}
 	.mainbg{
 		background-color: #eaeaea;
-		padding: 25px 15px;
+		padding: 30px 30px 0;
 	}
 	.mainbg .thumbnail{
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		text-align: center;
 	}
 	.row{margin: 0 -15px;}
@@ -99,14 +120,16 @@
   		<h2>Blog Heading</h2>
   		<div class="row">
   		  <aside class="col-md-4">
-  			<h2>Left Navigation</h2>
-  			<ul class="nav">
-  			  <li><a href="javascript:void(0);">sub nav 1</a></li>
-  			  <li><a href="javascript:void(0);">sub nav 2</a></li>
-  			  <li><a href="javascript:void(0);">sub nav 3</a></li>
-  			  <li><a href="javascript:void(0);">sub nav 4</a></li>
-  			</ul>
-  			<div class="clearfix">&nbsp;</div>
+  		    <div class="sidebar">
+  			  <h2>Left Navigation</h2>
+  			  <ul class="nav">
+  			    <li><a href="javascript:void(0);">sub nav 1</a></li>
+  			    <li><a href="javascript:void(0);">sub nav 2</a></li>
+  			    <li><a href="javascript:void(0);">sub nav 3</a></li>
+  			    <li><a href="javascript:void(0);">sub nav 4</a></li>
+  			  </ul>
+  			  <div class="clearfix">&nbsp;</div>
+  			</div>
   		  </aside>
   		  <div class="col-md-8">
   		   <div class="mainbg">
@@ -133,6 +156,7 @@
   		    </div>
   		   </div>
   		  </div>
+  		  <div class="clearfix"></div>
   		</div>
   	</div>
   </body>
