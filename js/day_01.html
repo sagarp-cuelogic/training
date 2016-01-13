@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS - Day 01</title>
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<style type="text/css">
+	body{
+		font-family: arial, sans-serif;
+	}
+	span{
+		padding:0 0 0 30px;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Practicals - Day 1:</h1>
+
+<h4>Write a program to create variables of the following types:<br>
+    -    int<br>
+    -    string<br>
+    -    boolean<br>
+    -    object<br>
+    -    array</h4>
+
+
+<h5>Crate variable type int :
+<span id="person_age"></span></h5>
+
+<h5>Crate variable type srting :
+<span id="person_name"></span></h5>
+
+<!-- <h5>Crate variable type srting:
+<span id="person_name"></span></h5> -->
+
+<h5>Crate variable type Object :
+<span id="student_name"></span></h5>
+
+<h5>Crate variable type arrey :
+<span id="color_names"></span></h5>
+
+<h5>Add Values in arrey :
+<span id="add_color"></span></h5>
+
+<h5>Remove Values in arrey :
+<span id="remove_color"></span></h5>
+
+<h5>Toggle values of boolean variables :
+<span id="toggle_boolean"></span></h5>
+
+<h5>Concatenate string with more values :
+<span id="concat_string"></span></h5>
+
+<script>
+	var age = 54;																		// int
+	var FullName = "David Smith";														// string
+	var car = Boolean(true);																		// boolean
+	var student = {firstName:"Stive", lastName:"Jobs", age:"55", degree:"B.Tech."};		// object
+	var colors = ["Orange", "Red", "Blue", "Yellow"];									// array
+
+//	alert(car);
+
+	document.getElementById("person_age").innerHTML = age;
+	document.getElementById("person_name").innerHTML = FullName;
+	document.getElementById("student_name").innerHTML = student.firstName + " " + student.lastName + " is " + student.degree;
+	document.getElementById("color_names").innerHTML = colors;
+
+//	add values in array
+	colors.push ("Black", "Green");
+	document.getElementById("add_color").innerHTML = colors;
+
+//	Delete values from the array
+	colors.splice(1, 2)
+	document.getElementById("remove_color").innerHTML = colors;
+
+//	Toggle values of boolean variables
+	if (car == true) {
+		document.getElementById("toggle_boolean").innerHTML = "false";
+	}else{
+		document.getElementById("toggle_boolean").innerHTML = "true";
+	}
+
+//	Concatenate string with more values
+	var con_string = FullName.concat(" Rogger");
+	document.getElementById("concat_string").innerHTML = con_string;
+
+</script>
+
+</body>
+</html>
