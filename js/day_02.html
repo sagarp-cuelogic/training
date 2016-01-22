@@ -66,15 +66,21 @@ function student (first_name, last_name, city){
 	this.Name = first_name;
 	this.Surname = last_name;
 	this.residance = city;
+
+//	Adding method to the class
+	this.role = function (role) {
+		this.role = role;
+	}
 }
 
 var student1 = new student("Sagar", "Patil", "Nashik")
 var student2 = new student("Vanshaj", "Rai", "Pune")
 var student3 = new student("Nilesh", "Mahajan", "Mumbai")
+student3.role("Web Developer");
 
 console.log(student1.Name, student1.Surname, student1.residance);
 console.log(student2.Name, student2.Surname, student2.residance);
-console.log(student3.Name, student3.Surname, student3.residance);
+console.log(student3);
 
 
 // 4) Write a program that will print number from 1 to 100
