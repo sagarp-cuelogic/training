@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>JS - Day 01</title>
-	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 	<style type="text/css">
 	body{
 		font-family: arial, sans-serif;
@@ -88,11 +87,35 @@
 //	1) using Object Literal
 	var person = {fName:"Sagar", lName:"Patil", Role:"FED", Age:"31"};
 
+
 //	2) using Keyword New
-	var car1 = new object();
-	car1.make = "Nissan";
-	car1.model = "Micra";
-	car1.color = "White";
+	function object(make, model, color) {
+	    this.make = make;
+	    this.model = model;
+	    this.color = color;
+	}
+	var car1 = new object("Nissan", "Micra", "White");
+	console.log(car1.make)
+
+//  3)  Object 
+	var object_dum = ["vanshaj", "Sagar", "Ravi"]
+	console.log(object_dum[1]);
+
+	var object_name = "Vanshaj"
+	console.log(object_name);
+
+//  4) Creating object via Anonymous function 
+	var object_fun = function(param1,param2,param3){
+		console.log(param1,param2,param3);
+	}
+	object_fun("top", "bottom", "center");
+	
+//	Creating a Array
+//	1) using Literal
+	var bikes = ["Honda", "Ducati", "KTM"]
+
+//	2 using Keyword New
+	var Bike = new Array ("HD", "CBR")
 
 </script>
 

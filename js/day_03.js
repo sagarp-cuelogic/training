@@ -1,3 +1,12 @@
+//	1) Write a program to calculate factorial
+var factorial = function num(i){
+	if (i <= 1) {
+		return 1;
+	} else {
+		return i * num(i - 1);
+	}
+}
+factorial(5);
 
 //	2) Update program - 2 of Practicals Day 2 to add a method that will print name (called printName()) of each student object in its prototype.
 function student (first_name, last_name, city){
@@ -22,12 +31,16 @@ student3.printName();
 // 3) count the no of occurrences of substring
 var count = 0;
 var find_here = function(text1, text2){
-	for(i = 0; i < text1.length; i++){
+  for(i = 0; i < text1.length; i++){
 		if (text1[i] == text2){
 			count++;
 		}
 	}
 	console.log(text2 + " occured " + count + " times in " + text1);
+
+  var index = text1.lastIndexOf(text2);
+  console.log(index);
+
 }
 find_here("sagar patil", "a");
 
