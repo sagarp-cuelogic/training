@@ -1,9 +1,12 @@
 var bob = {firstName: "Bob", lastName: "Jones", phoneNumber: "(650) 777-7777"};
 var mary = {firstName: "Mary", lastName: "Johnson", phoneNumber: "(650) 888-8888"};
+var bob2 = {firstName: "Bob", lastName: "Willson", phoneNumber: "(650) 777-7777"};
+var linda = {firstName: "Linda", lastName: "Johnson", phoneNumber: "(650) 888-8888"};
 
-var contacts = [bob, mary];
+var contacts = [bob, mary, bob2, linda];
 var checkList = document.getElementsByClassName("contact");
-console.log(checkList.length);
+var searchList = document.getElementsByClassName("srch-result");
+// console.log(contacts.length);
 
 function printPerson(person) {
     document.getElementById("showlist").innerHTML += ("<p class='contact'>" + person.firstName + " " + person.lastName + "</p>");
@@ -46,9 +49,14 @@ function search(){
     // var contactsLength = contacts.length;
     for (var i=0; i < contacts.length; i++){
         if(value === (contacts[i].firstName) || value === (contacts[i].lastName)){
-            console.log(printPerson(contacts[i]));
-        }else{
-            return;
+			document.getElementById("search-results").innerHTML += ("<p class='srch-result'>" + contacts[i].firstName + " " + contacts[i].lastName + "</p>");
+			/*if(searchList.length === 0){
+				document.getElementById("search-results").innerHTML += ("<p class='srch-result'>" + contacts[i].firstName + " " + contacts[i].lastName + "</p>");
+			} else {
+				document.getElementById("search-results").innerHTML = "";
+				document.getElementById("search-results").innerHTML += ("<p class='srch-result'>" + contacts[i].firstName + " " + contacts[i].lastName + "</p>");
+			}*/
+            // return;
         }
     }
 }
