@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<style type="text/css">
+			body{
+				font-family:'Open sans';
+				font-size:14px;
+			}
+			#showlist{
+				padding-top:15px;
+			}
+			#showlist p{
+				margin:0 0 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Create an address book</h1>
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="fname">First Name</label>
+							<input type="text" class="form-control" id="fname">
+						</div>
+						<div class="form-group">
+							<label for="lname">Last Name</label>
+							<input type="text" class="form-control" id="lname">
+						</div>
+						<div class="form-group">
+							<label for="phone">Phone</label>
+							<input type="tel" class="form-control" id="phone">
+						</div>
+						<button type="button" class="btn btn-default" onclick="add();">Add to List</button>
+					</form>
+					<button type="button" class="btn btn-default" onclick="refreshlist();">Show List</button>
+				</div>
+				<div class="col-md-6" id="showlist">
+					
+				</div>
+				<div class="col-md-6" id="search-result">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for..." id="search">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" onclick="search();">Go!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="address_book.js"></script>
+	</body>
+</html>
