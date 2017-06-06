@@ -16,6 +16,8 @@ function list() {
 		//alert("list printed");
 	}
 }
+
+//	view updated contact list
 function refreshlist(){
 	if(checkList.length === 0){
 		return list();
@@ -24,6 +26,8 @@ function refreshlist(){
 		return list();
 	}
 }
+
+//	Add new contact to the list
 function add(){
 	contacts[contacts.length] = {
 		"firstName": document.getElementById("fname").value,
@@ -35,6 +39,7 @@ function add(){
 	document.getElementById("lname").value = "";
 	document.getElementById("phone").value = "";
 }
+
 // Create a search function
 function search(){
 	var value = document.getElementById("search").value;
