@@ -48,7 +48,7 @@ function search(){
 	var value = document.getElementById("search").value;
     // var contactsLength = contacts.length;
     for (var i=0; i < contacts.length; i++){
-        if(value === (contacts[i].firstName) || value === (contacts[i].lastName)){
+        if(value == (contacts[i].firstName) || value == (contacts[i].lastName)){
 			document.getElementById("search-results").innerHTML += ("<p class='srch-result'>" + contacts[i].firstName + " " + contacts[i].lastName + "</p>");
 			/*if(searchList.length === 0){
 				document.getElementById("search-results").innerHTML += ("<p class='srch-result'>" + contacts[i].firstName + " " + contacts[i].lastName + "</p>");
@@ -60,3 +60,55 @@ function search(){
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//	Object constructor and methods on it
+function Player(n,s,r){
+	this.name = n;
+	this.score = s;
+	this.rank = r;
+
+//	this is called methods of the Object
+	// this.logInfo = function(){
+	// 	console.log("I am: " + this.name);
+	// };
+	// this.pramote = function(){
+	// 	this.rank--;
+	// 	console.log("My new rank is " + this.rank);
+	// }
+}
+
+//	Adding prototype to the object
+Player.prototype.logInfo = function(){
+	console.log("I am: " + this.name);
+}
+Player.prototype.pramote = function(){
+	this.rank--;
+	console.log("My new rank is " + this.rank);
+}
+
+//	Creating new Objects with object constructors
+var sagar = new Player("Sagar", 3200, 5);
+var sharad = new Player("Sharad", 1800, 8);
+var pradip = new Player();
+
+console.log(sagar.name);
+console.log(sharad.name);
+
+sagar.logInfo();
+sharad.logInfo();
+
+sagar.pramote();
+sharad.pramote();

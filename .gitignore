@@ -1,0 +1,9 @@
+# Ignore configuration files that may contain sensitive information.
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+js_self_assesments/
+tmp
+.DS_Store
+.idea
