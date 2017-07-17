@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<style type="text/css">
+			.form-control.highlight{
+				border-color:#DD5858;
+				box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221, 88, 88, 0.6)
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<h1>Login</h1>
+					<form id="signup" name="registration">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" name="email">
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" name="password">
+						</div>
+						<button type="button" class="btn btn-default btn-success" onclick="formValidate()">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script -->
+		<script type="text/javascript" src="register.js"></script>
+	</body>
+</html>
