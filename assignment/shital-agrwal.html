@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<style type="text/css">
+			table{
+				font-size:14px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="clearfix">&nbsp;</div>
+				<div class="col-md-8">
+					<h1>Welcome Shital</h1>
+				</div>
+				<div class="col-md-4 text-right">
+					<input type="button" name="edit" class="btn btn-success" value="Edit Profile" />
+				</div>
+				<div class="clearfix">&nbsp;</div>
+				<hr />
+				<div class="col-md-6">
+					<h4>My Students</h4>
+					<table class="table table-bordered table-striped" id="mystudents">
+						<tr id="head">
+							<td width="135">Name</td>
+							<td>Email</td>
+							<td width="115">Phone</td>
+							<td width="60">Action</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-6">
+				<div class="input-group">
+					<select id="add-student" class="form-control">
+						<option>Select</option>
+					</select>
+					<span class="input-group-btn">
+						<button class="btn btn-success" type="button" onclick="addSelected();">Add Student</button>
+					</span>
+				</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="teacher-sa.js"></script>
+	</body>
+</html>

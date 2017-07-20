@@ -73,7 +73,7 @@ function compairePassword(){
 	}else{
 		pass1.className = "form-control";
 	}
-	if(pass1.value === pass2.value && pass2.value != ""){
+	if(pass1.value === pass2.value){
 		pass2.className = "form-control";
 		return true;
 	}else{
