@@ -11,6 +11,18 @@ var letters = /^[A-Za-z]+$/;
 var num = /^[0-9]+$/;
 var mailformat =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+var newUser = [];
+
+function updateUserList(){
+	newUser.push({
+		firstName: fName.value,
+		lastName: lName.value,
+		address: address.value,
+		phone: phone.value,
+		email: email.value,
+		password: pass1.value
+	});
+}
 function firstNameCheck(){
 	// For Highlight
 	if(fName.value.match(letters)){
@@ -85,20 +97,13 @@ function compairePassword(){
 }
 
 function formValidate(){
-	/*var inputField = document.getElementsByClassName("form-control");
-	if (inputField.value === ""){
-		inputField.className = "form-control highlight";
-		return false;
-	}else{
-		inputField.className = "form-control";
-		return true;
-	};*/
 	if (firstNameCheck()){
 		if (lastNameCheck()){
 			if (addressCheck(address, 12)){
 				if (emailValidate()){
 					if (phoneValidate()){
 						if (compairePassword()){
+							updateUserList();
 							alert("Form Submited Succesfully!!");
 							regiForm.reset();
 						};
@@ -109,3 +114,4 @@ function formValidate(){
 	};
 	return false;
 }
+
