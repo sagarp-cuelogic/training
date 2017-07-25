@@ -2,13 +2,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 		<style type="text/css">
-			table{
-				font-size:14px;
-			}
-			tr#head{
-				background-color:#5bc0de;
-				font-weight:bold;
-				color:white;
+			.form-control.highlight{
+				border-color:#DD5858;
+				box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221, 88, 88, 0.6)
 			}
 		</style>
 	</head>
@@ -54,14 +50,14 @@
 							<input type="password" class="form-control" name="confirmpassword">
 						</div>
 						<div class="col-md-12">
-							<button type="button" class="btn btn-default btn-success" onclick="formValidate()">Update Profile Info</button>
+							<button type="button" class="btn btn-default btn-success" onclick="updateProfile()">Update Profile Info</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="data.js"></script>
-		<script type="text/javascript" src="edit-profile-student.js"></script>
+		<script type="text/javascript" src="register.js"></script>
+		<script type="text/javascript" src="edit-profile.js"></script>
 	</body>
 </html>

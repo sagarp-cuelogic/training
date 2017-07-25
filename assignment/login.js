@@ -1,5 +1,5 @@
 //	Check if the Credentials are valid
-function IsValid(userEmail,userPass){
+function IsValid(userEmail, userPass){
 	for(i = 0; i < allUsers.length; i++){
 		if(userEmail == allUsers[i].email && userPass == allUsers[i].password){
 			return allUsers[i].category;
@@ -12,7 +12,7 @@ function IsValid(userEmail,userPass){
 function login(){
 	var userEmail = document.getElementById('email').value;
 	var userPass = document.getElementById('password').value;
-	var category = IsValid(userEmail,userPass);
+	var category = IsValid(userEmail, userPass);
 	if(category!="" && userEmail === 'sagar.patil@cuelogic.com'){
 		window.location.href = 'sagar-patil.html';
 	}else if(category!="" && userEmail === 'shital.agrwal@cuelogic.com'){

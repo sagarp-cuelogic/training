@@ -78,7 +78,8 @@ function addOnebyOne(){
 	cell3.innerHTML = allUsers[i].phone;
 	if(allUsers[i].category === 'student'){
 		row.appendChild(cell4);
-		cell4.innerHTML = '<a href="#" onclick="deleteRow(this);">X</a>'
+		cell4.setAttribute('align', 'center');
+		cell4.innerHTML = '<a href="javascript:void(0);" onclick="deleteRow(this);">X</a>'
 	};
 	tbody[0].appendChild(row);
 }

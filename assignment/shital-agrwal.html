@@ -20,7 +20,7 @@
 					<h1>Welcome Shital</h1>
 				</div>
 				<div class="col-md-4 text-right">
-					<input type="button" name="edit" class="btn btn-success" value="Edit Profile" />
+					<a href="edit-profile-teacher.html" name="edit" class="btn btn-success">Edit Profile</a>
 				</div>
 				<div class="clearfix">&nbsp;</div>
 				<hr />
@@ -33,6 +33,7 @@
 							<td width="115">Phone</td>
 							<td width="60">Action</td>
 						</tr>
+						<!-- My Students list will be dynamicaly added here -->
 					</table>
 				</div>
 				<div class="col-md-6">
@@ -40,6 +41,7 @@
 					<div class="input-group">
 						<select id="add-student" class="form-control">
 							<option>Select</option>
+							<!-- All Students list will be added here -->
 						</select>
 						<span class="input-group-btn">
 							<button class="btn btn-success" type="button" onclick="addSelected();">Add Student</button>
@@ -48,7 +50,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="data.js"></script>
 		<script type="text/javascript" src="teacher-sa.js"></script>
 	</body>

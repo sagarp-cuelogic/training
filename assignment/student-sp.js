@@ -8,3 +8,4 @@ function myTeacherList(){
 	}
 }
 myTeacherList();
+console.log(myTeachers);

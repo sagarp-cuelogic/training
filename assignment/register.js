@@ -106,6 +106,7 @@ function formValidate(){
 							updateUserList();
 							alert("Form Submited Succesfully!!");
 							regiForm.reset();
+							console.log(newUser);
 						};
 					};
 				};
@@ -114,4 +115,6 @@ function formValidate(){
 	};
 	return false;
 }
-
+if(window.location.href.indexOf("register") > -1) {
+	console.log(newUser);
+}
