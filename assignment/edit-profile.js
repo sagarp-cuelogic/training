@@ -56,12 +56,21 @@ function updateValues(){
 	}else if(oldfName === newfName && oldlName === newlName && oldAddress === newAddress && oldPhone === newPhone && oldPass1 === newPass1){
 		alert('Nothing to update...!');
 	}else{
-		allUsers[x].firstName = fName.value;
-		allUsers[x].lastName = lName.value;
-		allUsers[x].address = address.value;
-		allUsers[x].phone = phone.value;
-		// allUsers[x].email = email.value;
-		allUsers[x].password = pass1.value;
+		if(oldfName != newfName){
+			allUsers[x].firstName = fName.value;
+		}
+		if(oldlName != newlName){
+			allUsers[x].lastName = lName.value;
+		}
+		if(oldAddress != newAddress){
+			allUsers[x].address = address.value;
+		}
+		if(oldPhone != newPhone){
+			allUsers[x].phone = phone.value;
+		}
+		if(oldPass1 != newPass1){
+			allUsers[x].password = pass1.value;
+		}
 		alert("Profile updated Succesfully!!");
 		console.log(allUsers[x]);
 	}
