@@ -1,14 +1,43 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<style type="text/css">
+			table{
+				font-size:14px;
+			}
+			tr#head{
+				background-color:#5bc0de;
+				font-weight:bold;
+				color:white;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h1>You are logged in as a Student</h1>
+				<div class="clearfix">&nbsp;</div>
+				<div class="col-md-8">
+					<h1>Welcome <span id="greet"></span></h1>
+				</div>
+				<div class="col-md-4 text-right">
+					<a href="edit-profile-student.html" name="edit" class="btn btn-success">Edit Profile</a>
+				</div>
+				<div class="clearfix">&nbsp;</div>
+				<hr />
+				<div class="col-md-6">
+					<h4>My Teachers</h4>
+					<table class="table table-bordered table-striped" id="myteachers">
+						<tr id="head">
+							<td>Name</td>
+							<td>Email</td>
+							<td>Phone</td>
+						</tr>
+						<!-- My Teachers list will be dynamicaly added here -->
+					</table>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="student.js"></script>
 	</body>
 </html>
